@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import requireContext from 'require-context.macro';
 
-const heroImages = require.context('../../assets/heroes', true);
+const heroImages = requireContext('../../assets/heroes', true);
 
 export const HeroCard = ({ 
     id,

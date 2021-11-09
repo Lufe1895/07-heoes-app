@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import { getHeroesById } from '../../selectors/getHeroById';
+import requireContext from 'require-context.macro';
 
-const heroImages = require.context('../../assets/heroes', true);
+const heroImages = requireContext('../../assets/heroes', true);
 
 export const HeroScreen = ({ history }) => {
     const { heroId } = useParams();

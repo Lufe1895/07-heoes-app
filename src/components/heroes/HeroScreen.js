@@ -10,7 +10,7 @@ export const HeroScreen = ({ history }) => {
     
     const hero = useMemo(() => getHeroesById(heroId), [ heroId ]);
 
-    console.log(heroImages(`./${heroId}.jpg`));
+    // console.log(heroImages(`./${heroId}.jpg`));
 
     if(!hero) {
         return <Redirect to="/" />
